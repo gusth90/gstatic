@@ -15,7 +15,6 @@ pages.keys().forEach(function (pageKey) {
       var stylePath = styleKey.split('.')[1].substring(1)
 
       page = page.replace(new RegExp('<link( rel=\"stylesheet\")? href=\"\/?' + stylePath + '\.css\??.*?\"( \/|\/)?>', 'gi'), '<style>' + styles(styleKey) + '</style>')
-      console.log(page)
     })
 
     document.getElementsByTagName('html')[0].innerHTML = page
